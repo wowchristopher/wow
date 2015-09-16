@@ -13,7 +13,12 @@ for ( $x = 0; $x < $rowcount; $x++)
 	//build table columns
 	for ( $y = 0; $y < $columncount; $y++)
 	{
-	   	echo "<td>" . ($y+1) . "</td>";
+		if ($x == 0)
+		{
+		echo "<th> Header no " . ($y+1) . "</th>";	
+		}
+	   	echo "<td>" . ($y+$x)/($x+1) . "</td>";
+		
 	}
 	echo "</tr>";
 }
